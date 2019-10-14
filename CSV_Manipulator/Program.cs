@@ -14,6 +14,7 @@ namespace Lecture
         static void Main(string[] args)
         {
             
+            Graphics.Initialize();
             CsvTable wordsCSV = ReadingCSVFiles.GetTable();
             Console.WriteLine(wordsCSV.Path);
             ReadingCSVFiles.OutputTable(wordsCSV);
@@ -22,7 +23,9 @@ namespace Lecture
             Console.ReadLine();
             do
             {
+                Graphics.Red();
                 Console.WriteLine("(1) add row, (2) delete a row, (3) add a column, (4) delete a column, (5) csvhelper (0) exit");
+                Graphics.Black();
                 usrAction = Console.ReadLine();
                 if (usrAction == "1")
                 {

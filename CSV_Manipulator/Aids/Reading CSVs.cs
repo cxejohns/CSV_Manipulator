@@ -12,14 +12,19 @@ namespace Lecture.Aids
     public class ReadingCSVFiles
     {
 
+        public static string GetPath()
+        {
+            var slnDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
+            var fileName = "words.csv";
+            var fullPath = Path.Combine(slnDirectory, fileName);
+            return fullPath;
+        }
         public static CsvTable GetTable()
         {
 
             CsvTable table = new CsvTable();
-            var slnDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
-            var fileName = "words.csv";
-            var fullPath = Path.Combine(slnDirectory, fileName);
-            table.Path = fullPath;
+            
+            table.Path = GetPath();
             var rows = new List<Row>();
             table.Rows = rows;
 
@@ -71,14 +76,17 @@ namespace Lecture.Aids
 
     public static void OutputTable(CsvTable table)
         {
-            for(int i = 0; i <= table.MaxRowLength; i++)
+            Graphics.AlternateGreenAndBlack();
+            bool colorStatus = false;
+            for (int i = 0; i <= table.MaxRowLength; i++)
             {
                 Console.Write(PadBoth(i.ToString()));
                 Console.Write(" |");
             }
-
+            Graphics.AlternateGreenAndBlack();
             for (int i = 0; i < table.Rows.Count; i++) // Row row in table.Rows)
             {
+
                 Console.WriteLine();
                 Console.Write(PadBoth((i + 1).ToString()));
                 Console.Write(" |");
@@ -88,6 +96,9 @@ namespace Lecture.Aids
                     Console.Write(PadBoth(cell.Text));
                     Console.Write(" |");
                 }
+                colorStatus = !colorStatus;
+                Graphics.AlternateGreenAndBlack();
+
             }
         }
     public static string PadBoth(string source)
@@ -102,7 +113,7 @@ namespace Lecture.Aids
     public static void GetTableFixed()
         {
             CsvTable table = new CsvTable();
-            table.Path = "D:\\Desktop\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator\\words.csv";
+            table.Path = GetPath();
             var rows = new List<Row>();
             table.Rows = rows;
 
@@ -115,7 +126,7 @@ namespace Lecture.Aids
                 while (csv.Read())
                 {
                     Console.WriteLine();
-                    for (int i = 0; i < 3; i++)
+                    for (int i = 0; i < 10; i++)
                     {
                         string foo = csv.GetField(i);
                         Console.Write(foo);
