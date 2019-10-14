@@ -2,6 +2,7 @@
 using Lecture.Aids;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,9 @@ namespace Lecture
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Words.csv:");
-
+            
             CsvTable wordsCSV = ReadingCSVFiles.GetTable();
+            Console.WriteLine(wordsCSV.Path);
             ReadingCSVFiles.OutputTable(wordsCSV);
             string usrAction = null;
 

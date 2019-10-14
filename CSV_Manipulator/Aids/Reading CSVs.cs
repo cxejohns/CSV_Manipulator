@@ -16,7 +16,10 @@ namespace Lecture.Aids
         {
 
             CsvTable table = new CsvTable();
-            table.Path = "D:\\Desktop\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator\\words.csv";
+            var slnDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
+            var fileName = "words.csv";
+            var fullPath = Path.Combine(slnDirectory, fileName);
+            table.Path = fullPath;
             var rows = new List<Row>();
             table.Rows = rows;
 

@@ -9,3 +9,14 @@ D:\Desktop\CSV_Manipulator\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2
 D:\Desktop\CSV_Manipulator\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.AssemblyInfo.cs
 D:\Desktop\CSV_Manipulator\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.dll
 D:\Desktop\CSV_Manipulator\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.pdb
+D:\Home\CSV_Manipulator\CSV_Manipulator\bin\Debug\netcoreapp2.1\CSV_Manipulator.deps.json
+D:\Home\CSV_Manipulator\CSV_Manipulator\bin\Debug\netcoreapp2.1\CSV_Manipulator.runtimeconfig.json
+D:\Home\CSV_Manipulator\CSV_Manipulator\bin\Debug\netcoreapp2.1\CSV_Manipulator.runtimeconfig.dev.json
+D:\Home\CSV_Manipulator\CSV_Manipulator\bin\Debug\netcoreapp2.1\CSV_Manipulator.dll
+D:\Home\CSV_Manipulator\CSV_Manipulator\bin\Debug\netcoreapp2.1\CSV_Manipulator.pdb
+D:\Home\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.csprojAssemblyReference.cache
+D:\Home\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.csproj.CoreCompileInputs.cache
+D:\Home\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.AssemblyInfoInputs.cache
+D:\Home\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.AssemblyInfo.cs
+D:\Home\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.dll
+D:\Home\CSV_Manipulator\CSV_Manipulator\obj\Debug\netcoreapp2.1\CSV_Manipulator.pdb

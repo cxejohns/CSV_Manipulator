@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj": {}
+    "D:\\Home\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj": {
+    "D:\\Home\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj",
+        "projectUniqueName": "D:\\Home\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj",
         "projectName": "CSV_Manipulator",
-        "projectPath": "D:\\Desktop\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj",
+        "projectPath": "D:\\Home\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator.csproj",
         "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\CSV_Manipulator\\CSV_Manipulator\\CSV_Manipulator\\obj\\",
+        "outputPath": "D:\\Home\\CSV_Manipulator\\CSV_Manipulator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
