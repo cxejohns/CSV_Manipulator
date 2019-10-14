@@ -180,7 +180,6 @@ namespace CSV_Manipulator.Aids
                     var recordsRaw = csv.GetRecords<Foo>();
                     foreach(Foo record in recordsRaw)
                     {
-                        Console.WriteLine("test");
                         record.Name = record.Name.ToUpper();
                         records.Add(record);
 

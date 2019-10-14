@@ -25,12 +25,12 @@ namespace CSV_Manipulator.Aids
             var fullPath = Path.Combine(slnDirectory, FileName + ".csv");
             return fullPath;
         }
-        public static CsvTable GetTable()
+        public static CsvTable GetTable(string fileName)
         {
 
             CsvTable table = new CsvTable();
             
-            table.Path = GetPath();
+            table.Path = GetPath(fileName);
             var rows = new List<Row>();
             table.Rows = rows;
 
@@ -82,13 +82,15 @@ namespace CSV_Manipulator.Aids
 
     public static void OutputTable(CsvTable table)
         {
-            Graphics.AlternateGreenAndBlack();
             bool colorStatus = false;
-            for (int i = 0; i <= table.MaxRowLength; i++)
-            {
-                Console.Write(PadBoth(i.ToString()));
-                Console.Write(" |");
-            }
+
+            //Graphics.AlternateGreenAndBlack();
+            //for (int i = 0; i <= table.MaxRowLength; i++)
+            //{
+            //    Console.Write(PadBoth(i.ToString()));
+            //    Console.Write(" |");
+            //}
+
             Graphics.AlternateGreenAndBlack();
             for (int i = 0; i < table.Rows.Count; i++) // Row row in table.Rows)
             {
