@@ -19,6 +19,12 @@ namespace Lecture.Aids
             var fullPath = Path.Combine(slnDirectory, fileName);
             return fullPath;
         }
+        public static string GetPath(string FileName)
+        {
+            var slnDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
+            var fullPath = Path.Combine(slnDirectory, FileName + ".csv");
+            return fullPath;
+        }
         public static CsvTable GetTable()
         {
 
@@ -121,11 +127,14 @@ namespace Lecture.Aids
 
             using (var csv = new CsvReader(sr))
             {
+                
                 //csv.Read();
                 //csv.ReadHeader();
                 while (csv.Read())
                 {
                     Console.WriteLine();
+
+
                     for (int i = 0; i < 10; i++)
                     {
                         string foo = csv.GetField(i);
@@ -138,6 +147,25 @@ namespace Lecture.Aids
 
 
 
+        }
+
+    public static void CSVHelperTest()
+
+        {
+            string filename = "csvhelper";
+            using (var reader = new StreamReader(GetPath(filename)))
+            {
+                using (var csv = new CsvReader(reader))
+                {
+                    var records = csv.GetRecords<Foo>();
+                    foreach (Foo foo in records)
+                    {
+                        Console.WriteLine(foo.Id);
+                        Console.Write(foo.Name);
+                    }
+                }
+            }
+           
         }
 
     }

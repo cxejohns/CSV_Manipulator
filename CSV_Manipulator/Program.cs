@@ -51,7 +51,7 @@ namespace Lecture
                 }
                 else if (usrAction == "5")
                 {
-                    ReadingCSVFiles.GetTableFixed();
+                    ReadingCSVFiles.CSVHelperTest();
                 }
                 Console.ReadLine();
                 wordsCSV = ReadingCSVFiles.GetTable();
