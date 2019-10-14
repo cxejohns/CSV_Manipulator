@@ -1,4 +1,5 @@
 ﻿using CSV_Manipulator.Aids;
+using CsvHelper;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,11 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lecture.Aids
+namespace CSV_Manipulator.Aids
 {
     public class WritingCSVFiles
     {
 
+        public static string GetPath()
+        {
+            var slnDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
+            var fileName = "words.csv";
+            var fullPath = Path.Combine(slnDirectory, fileName);
+            return fullPath;
+        }
+        public static string GetPath(string FileName)
+        {
+            var slnDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\"));
+            var fullPath = Path.Combine(slnDirectory, FileName + ".csv");
+            return fullPath;
+        }
         public static void WipeFile(CsvTable table)
         {
 
@@ -137,6 +151,47 @@ namespace Lecture.Aids
                 Console.WriteLine(e.Message);
             }
 
+        }
+
+        public static void WriteCSVHelper()
+        {
+            var records = new List<Foo>
+            {
+                new Foo { Id = 3, Name = "three" },
+                new Foo { Id = 4, Name = "four" },
+            };
+            using (var writer = new StreamWriter(GetPath("csvhelper")))
+            using (var csv = new CsvWriter(writer))
+            {
+                csv.WriteRecords(records);
+            }
+        }
+
+
+
+        public static void CsvHelperToUpper()
+        {
+            string filename = "csvhelper";
+            var records = new List<Foo>();
+            using (var reader = new StreamReader(GetPath(filename)))
+            {
+                using (var csv = new CsvReader(reader))
+                {
+                    var recordsRaw = csv.GetRecords<Foo>();
+                    foreach(Foo record in recordsRaw)
+                    {
+                        Console.WriteLine("test");
+                        record.Name = record.Name.ToUpper();
+                        records.Add(record);
+
+                    }
+                }
+            }
+            using (var writer = new StreamWriter(GetPath(filename)))
+            using (var csvWriter = new CsvWriter(writer))
+            {
+                csvWriter.WriteRecords(records);
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lecture.Aids
+namespace CSV_Manipulator.Aids
 {
     public class ReadingCSVFiles
     {
@@ -160,8 +160,11 @@ namespace Lecture.Aids
                     var records = csv.GetRecords<Foo>();
                     foreach (Foo foo in records)
                     {
-                        Console.WriteLine(foo.Id);
+                        Console.WriteLine();
+                        Console.Write(foo.Id);
+                        Console.Write(" | ");
                         Console.Write(foo.Name);
+
                     }
                 }
             }
